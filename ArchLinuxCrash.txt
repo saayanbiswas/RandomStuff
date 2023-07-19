@@ -1,0 +1,456 @@
+Jul 19 01:10:42 LEGION rtkit-daemon[798]: Supervising 8 threads of 4 processes of 1 users.
+Jul 19 01:10:42 LEGION rtkit-daemon[798]: Supervising 8 threads of 4 processes of 1 users.
+Jul 19 01:10:42 LEGION kwin_x11[1739]: Application::crashHandler() called with signal 11; recent crashes: 1
+Jul 19 01:10:43 LEGION systemd[1]: Created slice Slice /system/systemd-coredump.
+Jul 19 01:10:43 LEGION systemd[1]: Started Process Core Dump (PID 4089/UID 0).
+Jul 19 01:10:44 LEGION systemd-coredump[4090]: Process 1739 (kwin_x11) of user 1000 dumped core.
+                                               
+                                               Stack trace of thread 1749:
+                                               #0  0x00007fc8a0ff89e5 clock_nanosleep (libc.so.6 + 0xcf9e5)
+                                               #1  0x00007fc8a0ffd5e7 __nanosleep (libc.so.6 + 0xd45e7)
+                                               #2  0x00007fc8a0ffd51e sleep (libc.so.6 + 0xd451e)
+                                               #3  0x0000564a8f89eb6b n/a (kwin_x11 + 0x41b6b)
+                                               #4  0x00007fc8a3ec7641 _ZN6KCrash19defaultCrashHandlerEi (libKF5Crash.so.5 + 0x7641)
+                                               #5  0x00007fc8a0f62ab0 n/a (libc.so.6 + 0x39ab0)
+                                               #6  0x00007fc8a1026c0f __poll (libc.so.6 + 0xfdc0f)
+                                               #7  0x00007fc8a2ab126b n/a (libxcb.so.1 + 0xd26b)
+                                               #8  0x00007fc8a2ab2d1d xcb_wait_for_event (libxcb.so.1 + 0xed1d)
+                                               #9  0x00007fc89c404ed2 n/a (libQt5XcbQpa.so.5 + 0x62ed2)
+                                               #10 0x00007fc8a1ef34fa n/a (libQt5Core.so.5 + 0xf34fa)
+                                               #11 0x00007fc8a0fb044b n/a (libc.so.6 + 0x8744b)
+                                               #12 0x00007fc8a1033e40 n/a (libc.so.6 + 0x10ae40)
+                                               
+                                               Stack trace of thread 1768:
+                                               #0  0x00007fc8a0facf0e n/a (libc.so.6 + 0x83f0e)
+                                               #1  0x00007fc8a0faf7a0 pthread_cond_wait (libc.so.6 + 0x867a0)
+                                               #2  0x00007fc898ac7a4c n/a (radeonsi_dri.so + 0xc7a4c)
+                                               #3  0x00007fc898b1495c n/a (radeonsi_dri.so + 0x11495c)
+                                               #4  0x00007fc8a0fb044b n/a (libc.so.6 + 0x8744b)
+                                               #5  0x00007fc8a1033e40 n/a (libc.so.6 + 0x10ae40)
+                                               
+                                               Stack trace of thread 1739:
+                                               #0  0x00007fc8a0facf0e n/a (libc.so.6 + 0x83f0e)
+                                               #1  0x00007fc8a0faf7a0 pthread_cond_wait (libc.so.6 + 0x867a0)
+                                               #2  0x00007fc8a2ab19d6 n/a (libxcb.so.1 + 0xd9d6)
+                                               #3  0x00007fc8a2ab2985 xcb_wait_for_reply64 (libxcb.so.1 + 0xe985)
+                                               #4  0x00007fc8a1d0314d _XReply (libX11.so.6 + 0x4614d)
+                                               #5  0x00007fc8a1d035d1 XSync (libX11.so.6 + 0x465d1)
+                                               #6  0x00007fc89accd40d n/a (libGLX_mesa.so.0 + 0x4d40d)
+                                               #7  0x0000564a8f8b93a8 n/a (kwin_x11 + 0x5c3a8)
+                                               #8  0x00007fc8a30c0ea5 _ZN4KWin9GLTexture4bindEv (libkwinglutils.so.14 + 0x10ea5)
+                                               #9  0x00007fc8a3a78c56 _ZN4KWin18ItemRendererOpenGL10renderItemEPNS_4ItemEiRK7QRegionRKNS_15WindowPaintDataE (libkwin.so.5 + 0x278c56)
+                                               #10 0x00007fc8a3a001d4 _ZN4KWin18EffectsHandlerImpl10drawWindowEPNS_12EffectWindowEiRK7QRegionRNS_15WindowPaintDataE (libkwin.so.5 + 0x2001d4)
+                                               #11 0x00007fc8a3a7d56d _ZN4KWin14WorkspaceScene16finalPaintWindowEPNS_16EffectWindowImplEiRK7QRegionRNS_15WindowPaintDataE (libkwin.so.5 + 0x27d56d)
+                                               #12 0x00007fc8a3a0011c _ZN4KWin18EffectsHandlerImpl11paintWindowEPNS_12EffectWindowEiRK7QRegionRNS_15WindowPaintDataE (libkwin.so.5 + 0x20011c)
+                                               #13 0x00007fc8a3a0011c _ZN4KWin18EffectsHandlerImpl11paintWindowEPNS_12EffectWindowEiRK7QRegionRNS_15WindowPaintDataE (libkwin.so.5 + 0x20011c)
+                                               #14 0x00007fc8a3a81f80 _ZN4KWin14WorkspaceScene11paintWindowEPNS_10WindowItemEiRK7QRegion (libkwin.so.5 + 0x281f80)
+                                               #15 0x00007fc8a3a82227 _ZN4KWin14WorkspaceScene17paintSimpleScreenEiRK7QRegion (libkwin.so.5 + 0x282227)
+                                               #16 0x00007fc8a3a0006b _ZN4KWin18EffectsHandlerImpl11paintScreenEiRK7QRegionRNS_15ScreenPaintDataE (libkwin.so.5 + 0x20006b)
+                                               #17 0x00007fc8a3a0006b _ZN4KWin18EffectsHandlerImpl11paintScreenEiRK7QRegionRNS_15ScreenPaintDataE (libkwin.so.5 + 0x20006b)
+                                               #18 0x00007fc8a3a81ea7 _ZN4KWin14WorkspaceScene5paintEPNS_12RenderTargetERK7QRegion (libkwin.so.5 + 0x281ea7)
+                                               #19 0x00007fc8a3a73d4f _ZN4KWin13SceneDelegate5paintEPNS_12RenderTargetERK7QRegion (libkwin.so.5 + 0x273d4f)
+                                               #20 0x00007fc8a39bd9f6 _ZN4KWin10Compositor9paintPassEPNS_11RenderLayerEPNS_12RenderTargetERK7QRegion (libkwin.so.5 + 0x1bd9f6)
+                                               #21 0x00007fc8a39c2604 _ZN4KWin10Compositor9compositeEPNS_10RenderLoopE (libkwin.so.5 + 0x1c2604)
+                                               #22 0x00007fc8a39c292f _ZN4KWin13X11Compositor9compositeEPNS_10RenderLoopE (libkwin.so.5 + 0x1c292f)
+                                               #23 0x00007fc8a20d1237 n/a (libQt5Core.so.5 + 0x2d1237)
+                                               #24 0x00007fc8a39716f7 _ZN4KWin10RenderLoop14frameRequestedEPS0_ (libkwin.so.5 + 0x1716f7)
+                                               #25 0x00007fc8a39c85a8 _ZN4KWin17RenderLoopPrivate8dispatchEv (libkwin.so.5 + 0x1c85a8)
+                                               #26 0x00007fc8a20d1237 n/a (libQt5Core.so.5 + 0x2d1237)
+                                               #27 0x00007fc8a20d2d6f _ZN6QTimer7timeoutENS_14QPrivateSignalE (libQt5Core.so.5 + 0x2d2d6f)
+                                               #28 0x00007fc8a20c3cee _ZN7QObject5eventEP6QEvent (libQt5Core.so.5 + 0x2c3cee)
+                                               #29 0x00007fc8a177893f _ZN19QApplicationPrivate13notify_helperEP7QObjectP6QEvent (libQt5Widgets.so.5 + 0x17893f)
+                                               #30 0x00007fc8a209c2f8 _ZN16QCoreApplication15notifyInternal2EP7QObjectP6QEvent (libQt5Core.so.5 + 0x29c2f8)
+                                               #31 0x00007fc8a20ea9bb _ZN14QTimerInfoList14activateTimersEv (libQt5Core.so.5 + 0x2ea9bb)
+                                               #32 0x00007fc8a20eaf9a n/a (libQt5Core.so.5 + 0x2eaf9a)
+                                               #33 0x00007fc89fb0fa31 g_main_context_dispatch (libglib-2.0.so.0 + 0x5aa31)
+                                               #34 0x00007fc89fb6ccc9 n/a (libglib-2.0.so.0 + 0xb7cc9)
+                                               #35 0x00007fc89fb0d0e2 g_main_context_iteration (libglib-2.0.so.0 + 0x580e2)
+                                               #36 0x00007fc8a20eb15c _ZN20QEventDispatcherGlib13processEventsE6QFlagsIN10QEventLoop17ProcessEventsFlagEE (libQt5Core.so.5 + 0x2eb15c)
+                                               #37 0x00007fc8a209b004 _ZN10QEventLoop4execE6QFlagsINS_17ProcessEventsFlagEE (libQt5Core.so.5 + 0x29b004)
+                                               #38 0x00007fc8a209c4a3 _ZN16QCoreApplication4execEv (libQt5Core.so.5 + 0x29c4a3)
+                                               #39 0x0000564a8f89bef3 n/a (kwin_x11 + 0x3eef3)
+                                               #40 0x00007fc8a0f4c850 n/a (libc.so.6 + 0x23850)
+                                               #41 0x00007fc8a0f4c90a __libc_start_main (libc.so.6 + 0x2390a)
+                                               #42 0x0000564a8f89d425 n/a (kwin_x11 + 0x40425)
+                                               
+                                               Stack trace of thread 1776:
+                                               #0  0x00007fc8a0facf0e n/a (libc.so.6 + 0x83f0e)
+                                               #1  0x00007fc8a0faf7a0 pthread_cond_wait (libc.so.6 + 0x867a0)
+                                               #2  0x00007fc898ac7a4c n/a (radeonsi_dri.so + 0xc7a4c)
+                                               #3  0x00007fc898b1495c n/a (radeonsi_dri.so + 0x11495c)
+                                               #4  0x00007fc8a0fb044b n/a (libc.so.6 + 0x8744b)
+                                               #5  0x00007fc8a1033e40 n/a (libc.so.6 + 0x10ae40)
+                                               
+                                               Stack trace of thread 1775:
+                                               #0  0x00007fc8a0facf0e n/a (libc.so.6 + 0x83f0e)
+                                               #1  0x00007fc8a0faf7a0 pthread_cond_wait (libc.so.6 + 0x867a0)
+                                               #2  0x00007fc898ac7a4c n/a (radeonsi_dri.so + 0xc7a4c)
+                                               #3  0x00007fc898b1495c n/a (radeonsi_dri.so + 0x11495c)
+                                               #4  0x00007fc8a0fb044b n/a (libc.so.6 + 0x8744b)
+                                               #5  0x00007fc8a1033e40 n/a (libc.so.6 + 0x10ae40)
+                                               
+                                               Stack trace of thread 2225:
+                                               #0  0x00007fc8a1026c0f __poll (libc.so.6 + 0xfdc0f)
+                                               #1  0x00007fc89fb6cc2f n/a (libglib-2.0.so.0 + 0xb7c2f)
+                                               #2  0x00007fc89fb0d0e2 g_main_context_iteration (libglib-2.0.so.0 + 0x580e2)
+                                               #3  0x00007fc8a20eb15c _ZN20QEventDispatcherGlib13processEventsE6QFlagsIN10QEventLoop17ProcessEventsFlagEE (libQt5Core.so.5 + 0x2eb15c)
+                                               #4  0x00007fc8a209b004 _ZN10QEventLoop4execE6QFlagsINS_17ProcessEventsFlagEE (libQt5Core.so.5 + 0x29b004)
+                                               #5  0x00007fc8a1ef72d6 _ZN7QThread4execEv (libQt5Core.so.5 + 0xf72d6)
+                                               #6  0x00007fc8a1ef34fa n/a (libQt5Core.so.5 + 0xf34fa)
+                                               #7  0x00007fc8a0fb044b n/a (libc.so.6 + 0x8744b)
+                                               #8  0x00007fc8a1033e40 n/a (libc.so.6 + 0x10ae40)
+                                               
+                                               Stack trace of thread 2227:
+                                               #0  0x00007fc8a0facf0e n/a (libc.so.6 + 0x83f0e)
+                                               #1  0x00007fc8a0faf7a0 pthread_cond_wait (libc.so.6 + 0x867a0)
+                                               #2  0x00007fc898ac7a4c n/a (radeonsi_dri.so + 0xc7a4c)
+                                               #3  0x00007fc898b1495c n/a (radeonsi_dri.so + 0x11495c)
+                                               #4  0x00007fc8a0fb044b n/a (libc.so.6 + 0x8744b)
+                                               #5  0x00007fc8a1033e40 n/a (libc.so.6 + 0x10ae40)
+                                               
+                                               Stack trace of thread 1748:
+                                               #0  0x00007fc8a1026c0f __poll (libc.so.6 + 0xfdc0f)
+                                               #1  0x00007fc89fb6cc2f n/a (libglib-2.0.so.0 + 0xb7c2f)
+                                               #2  0x00007fc89fb0d0e2 g_main_context_iteration (libglib-2.0.so.0 + 0x580e2)
+                                               #3  0x00007fc8a20eb15c _ZN20QEventDispatcherGlib13processEventsE6QFlagsIN10QEventLoop17ProcessEventsFlagEE (libQt5Core.so.5 + 0x2eb15c)
+                                               #4  0x00007fc8a209b004 _ZN10QEventLoop4execE6QFlagsINS_17ProcessEventsFlagEE (libQt5Core.so.5 + 0x29b004)
+                                               #5  0x00007fc8a1ef72d6 _ZN7QThread4execEv (libQt5Core.so.5 + 0xf72d6)
+                                               #6  0x00007fc8a1536a9a n/a (libQt5DBus.so.5 + 0x18a9a)
+                                               #7  0x00007fc8a1ef34fa n/a (libQt5Core.so.5 + 0xf34fa)
+                                               #8  0x00007fc8a0fb044b n/a (libc.so.6 + 0x8744b)
+                                               #9  0x00007fc8a1033e40 n/a (libc.so.6 + 0x10ae40)
+                                               
+                                               Stack trace of thread 1764:
+                                               #0  0x00007fc8a0facf0e n/a (libc.so.6 + 0x83f0e)
+                                               #1  0x00007fc8a0faf7a0 pthread_cond_wait (libc.so.6 + 0x867a0)
+                                               #2  0x00007fc898ac7a4c n/a (radeonsi_dri.so + 0xc7a4c)
+                                               #3  0x00007fc898b1495c n/a (radeonsi_dri.so + 0x11495c)
+                                               #4  0x00007fc8a0fb044b n/a (libc.so.6 + 0x8744b)
+                                               #5  0x00007fc8a1033e40 n/a (libc.so.6 + 0x10ae40)
+                                               
+                                               Stack trace of thread 1765:
+                                               #0  0x00007fc8a0facf0e n/a (libc.so.6 + 0x83f0e)
+                                               #1  0x00007fc8a0faf7a0 pthread_cond_wait (libc.so.6 + 0x867a0)
+                                               #2  0x00007fc898ac7a4c n/a (radeonsi_dri.so + 0xc7a4c)
+                                               #3  0x00007fc898b1495c n/a (radeonsi_dri.so + 0x11495c)
+                                               #4  0x00007fc8a0fb044b n/a (libc.so.6 + 0x8744b)
+                                               #5  0x00007fc8a1033e40 n/a (libc.so.6 + 0x10ae40)
+                                               
+                                               Stack trace of thread 1798:
+                                               #0  0x00007fc8a1026c0f __poll (libc.so.6 + 0xfdc0f)
+                                               #1  0x00007fc89fb6cc2f n/a (libglib-2.0.so.0 + 0xb7c2f)
+                                               #2  0x00007fc89fb0d0e2 g_main_context_iteration (libglib-2.0.so.0 + 0x580e2)
+                                               #3  0x00007fc8a20eb15c _ZN20QEventDispatcherGlib13processEventsE6QFlagsIN10QEventLoop17ProcessEventsFlagEE (libQt5Core.so.5 + 0x2eb15c)
+                                               #4  0x00007fc8a209b004 _ZN10QEventLoop4execE6QFlagsINS_17ProcessEventsFlagEE (libQt5Core.so.5 + 0x29b004)
+                                               #5  0x00007fc8a1ef72d6 _ZN7QThread4execEv (libQt5Core.so.5 + 0xf72d6)
+                                               #6  0x00007fc8a2ec2b00 n/a (libQt5Qml.so.5 + 0x2c2b00)
+                                               #7  0x00007fc8a1ef34fa n/a (libQt5Core.so.5 + 0xf34fa)
+                                               #8  0x00007fc8a0fb044b n/a (libc.so.6 + 0x8744b)
+                                               #9  0x00007fc8a1033e40 n/a (libc.so.6 + 0x10ae40)
+                                               
+                                               Stack trace of thread 1769:
+                                               #0  0x00007fc8a0facf0e n/a (libc.so.6 + 0x83f0e)
+                                               #1  0x00007fc8a0faf7a0 pthread_cond_wait (libc.so.6 + 0x867a0)
+                                               #2  0x00007fc898ac7a4c n/a (radeonsi_dri.so + 0xc7a4c)
+                                               #3  0x00007fc898b1495c n/a (radeonsi_dri.so + 0x11495c)
+                                               #4  0x00007fc8a0fb044b n/a (libc.so.6 + 0x8744b)
+                                               #5  0x00007fc8a1033e40 n/a (libc.so.6 + 0x10ae40)
+                                               
+                                               Stack trace of thread 2226:
+                                               #0  0x00007fc8a0facf0e n/a (libc.so.6 + 0x83f0e)
+                                               #1  0x00007fc8a0faf7a0 pthread_cond_wait (libc.so.6 + 0x867a0)
+                                               #2  0x00007fc898ac7a4c n/a (radeonsi_dri.so + 0xc7a4c)
+                                               #3  0x00007fc898b1495c n/a (radeonsi_dri.so + 0x11495c)
+                                               #4  0x00007fc8a0fb044b n/a (libc.so.6 + 0x8744b)
+                                               #5  0x00007fc8a1033e40 n/a (libc.so.6 + 0x10ae40)
+                                               ELF object binary architecture: AMD x86-64
+Jul 19 01:10:44 LEGION systemd[1]: systemd-coredump@0-4089-0.service: Deactivated successfully.
+Jul 19 01:10:44 LEGION systemd[692]: plasma-kwin_x11.service: Main process exited, code=dumped, status=11/SEGV
+Jul 19 01:10:44 LEGION systemd[692]: plasma-kwin_x11.service: Failed with result 'core-dump'.
+Jul 19 01:10:44 LEGION systemd[692]: plasma-kwin_x11.service: Consumed 6.528s CPU time.
+Jul 19 01:10:44 LEGION plasmashell[3319]: ATTENTION: default value of option mesa_glthread overridden by environment.
+Jul 19 01:10:44 LEGION plasmashell[3319]: ATTENTION: default value of option mesa_glthread overridden by environment.
+Jul 19 01:10:44 LEGION systemd[692]: plasma-kwin_x11.service: Scheduled restart job, restart counter is at 1.
+Jul 19 01:10:44 LEGION systemd[692]: Stopped KDE Window Manager.
+Jul 19 01:10:44 LEGION systemd[692]: plasma-kwin_x11.service: Consumed 6.528s CPU time.
+Jul 19 01:10:44 LEGION systemd[692]: Starting KDE Window Manager...
+Jul 19 01:10:45 LEGION kwin_x11[4117]: kwin_xkbcommon: XKB: inet:323:58: unrecognized keysym "XF86EmojiPicker"
+Jul 19 01:10:45 LEGION kwin_x11[4117]: kwin_xkbcommon: XKB: inet:324:58: unrecognized keysym "XF86Dictate"
+Jul 19 01:10:45 LEGION systemd[692]: Started KDE Window Manager.
+Jul 19 01:10:45 LEGION dbus-daemon[719]: [session uid=1000 pid=719] Activating service name='org.kde.KSplash' requested by ':1.107' (uid=1000 pid=4117 comm="/usr/bin/kwin_x11 --replace")
+Jul 19 01:10:45 LEGION kwin_x11[4117]: OpenGL vendor string:                   AMD
+Jul 19 01:10:45 LEGION kwin_x11[4117]: OpenGL renderer string:                 AMD Radeon Graphics (rembrandt, LLVM 15.0.7, DRM 3.52, 6.4.3-arch1-2)
+Jul 19 01:10:45 LEGION kwin_x11[4117]: OpenGL version string:                  4.6 (Compatibility Profile) Mesa 23.1.3
+Jul 19 01:10:45 LEGION kwin_x11[4117]: OpenGL shading language version string: 4.60
+Jul 19 01:10:45 LEGION kwin_x11[4117]: Driver:                                 Unknown
+Jul 19 01:10:45 LEGION kwin_x11[4117]: GPU class:                              Unknown
+Jul 19 01:10:45 LEGION kwin_x11[4117]: OpenGL version:                         4.6
+Jul 19 01:10:45 LEGION kwin_x11[4117]: GLSL version:                           4.60
+Jul 19 01:10:45 LEGION kwin_x11[4117]: Mesa version:                           23.1.3
+Jul 19 01:10:45 LEGION kwin_x11[4117]: X server version:                       1.21.1
+Jul 19 01:10:45 LEGION kwin_x11[4117]: Linux kernel version:                   6.4.3
+Jul 19 01:10:45 LEGION kwin_x11[4117]: Requires strict binding:                yes
+Jul 19 01:10:45 LEGION kwin_x11[4117]: GLSL shaders:                           yes
+Jul 19 01:10:45 LEGION kwin_x11[4117]: Texture NPOT support:                   yes
+Jul 19 01:10:45 LEGION kwin_x11[4117]: Virtual Machine:                        no
+Jul 19 01:10:45 LEGION kernel: BUG: kernel NULL pointer dereference, address: 0000000000000048
+Jul 19 01:10:45 LEGION kernel: #PF: supervisor write access in kernel mode
+Jul 19 01:10:45 LEGION kernel: #PF: error_code(0x0002) - not-present page
+Jul 19 01:10:45 LEGION kernel: PGD 0 P4D 0 
+Jul 19 01:10:45 LEGION kernel: Oops: 0002 [#1] PREEMPT SMP NOPTI
+Jul 19 01:10:45 LEGION kernel: CPU: 12 PID: 1617 Comm: Xorg Tainted: P           OE      6.4.3-arch1-2 #1 1a353834a3a5276f8a83332e26f510c55d34a567
+Jul 19 01:10:45 LEGION kernel: Hardware name: LENOVO 82RG/LNVNB161216, BIOS JUCN58WW 02/09/2023
+Jul 19 01:10:45 LEGION kernel: RIP: 0010:drm_property_free_blob+0x8/0x80
+Jul 19 01:10:45 LEGION kernel: Code: ff e9 38 ff ff ff 66 66 2e 0f 1f 84 00 00 00 00 00 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 f3 0f 1e fa 0f 1f 44 00 <00> 55 48 8d 6f f0 53 48 8b 47 10 48 89 fb 48 8d b8 88 03 00 00 e8
+Jul 19 01:10:45 LEGION kernel: RSP: 0018:ffffadca498b7bd8 EFLAGS: 00010246
+Jul 19 01:10:45 LEGION kernel: RAX: 0000000000000001 RBX: ffff91cd44d00600 RCX: 0000000000000077
+Jul 19 01:10:45 LEGION kernel: RDX: ffffffff8f6d1338 RSI: 0000000000000000 RDI: ffff91cd10c40010
+Jul 19 01:10:45 LEGION kernel: RBP: 0000000000000000 R08: 0000000000000001 R09: 00000000802a0028
+Jul 19 01:10:45 LEGION kernel: R10: 0000000000000001 R11: 0000000000000100 R12: ffff91cc94b80010
+Jul 19 01:10:45 LEGION kernel: R13: 00000000ffffffff R14: 0000000000000000 R15: 000000000000001e
+Jul 19 01:10:45 LEGION kernel: FS:  00007fcb5cc4f480(0000) GS:ffff91d39e900000(0000) knlGS:0000000000000000
+Jul 19 01:10:45 LEGION kernel: CS:  0010 DS: 0000 ES: 0000 CR0: 0000000080050033
+Jul 19 01:10:45 LEGION kernel: CR2: 0000000000000048 CR3: 000000015ea94000 CR4: 0000000000750ee0
+Jul 19 01:10:45 LEGION kernel: PKRU: 55555554
+Jul 19 01:10:45 LEGION kernel: Call Trace:
+Jul 19 01:10:45 LEGION kernel:  <TASK>
+Jul 19 01:10:45 LEGION kernel:  ? __die+0x23/0x70
+Jul 19 01:10:45 LEGION kernel:  ? page_fault_oops+0x171/0x4e0
+Jul 19 01:10:45 LEGION kernel:  ? exc_page_fault+0x7f/0x180
+Jul 19 01:10:45 LEGION kernel:  ? asm_exc_page_fault+0x26/0x30
+Jul 19 01:10:45 LEGION kernel:  ? drm_property_free_blob+0x8/0x80
+Jul 19 01:10:45 LEGION kernel:  ? drm_property_free_blob+0x8/0x80
+Jul 19 01:10:45 LEGION kernel:  ? drm_property_free_blob+0x8/0x80
+Jul 19 01:10:45 LEGION kernel:  dm_crtc_destroy_state+0x26/0x30 [amdgpu f31eaf4f5b7b82d25bdd9f8623b450f77b89556a]
+Jul 19 01:10:45 LEGION kernel:  drm_atomic_state_default_clear+0xfd/0x2e0
+Jul 19 01:10:45 LEGION kernel:  __drm_atomic_state_free+0x6a/0xa0
+Jul 19 01:10:45 LEGION kernel:  drm_mode_obj_set_property_ioctl+0x384/0x3d0
+Jul 19 01:10:45 LEGION kernel:  ? __pfx_drm_mode_obj_set_property_ioctl+0x10/0x10
+Jul 19 01:10:45 LEGION kernel:  drm_ioctl_kernel+0xcd/0x170
+Jul 19 01:10:45 LEGION kernel:  drm_ioctl+0x26d/0x4b0
+Jul 19 01:10:45 LEGION kernel:  ? __pfx_drm_mode_obj_set_property_ioctl+0x10/0x10
+Jul 19 01:10:45 LEGION kernel:  amdgpu_drm_ioctl+0x4e/0x90 [amdgpu f31eaf4f5b7b82d25bdd9f8623b450f77b89556a]
+Jul 19 01:10:45 LEGION kernel:  __x64_sys_ioctl+0x94/0xd0
+Jul 19 01:10:45 LEGION kernel:  do_syscall_64+0x60/0x90
+Jul 19 01:10:45 LEGION kernel:  ? exit_to_user_mode_prepare+0x123/0x1e0
+Jul 19 01:10:45 LEGION kernel:  ? syscall_exit_to_user_mode+0x1b/0x40
+Jul 19 01:10:45 LEGION kernel:  ? do_syscall_64+0x6c/0x90
+Jul 19 01:10:45 LEGION kernel:  ? do_user_addr_fault+0x179/0x640
+Jul 19 01:10:45 LEGION kernel:  ? exit_to_user_mode_prepare+0x123/0x1e0
+Jul 19 01:10:45 LEGION kernel:  entry_SYSCALL_64_after_hwframe+0x72/0xdc
+Jul 19 01:10:45 LEGION kernel: RIP: 0033:0x7fcb5d62976f
+Jul 19 01:10:45 LEGION kernel: Code: 00 48 89 44 24 18 31 c0 48 8d 44 24 60 c7 04 24 10 00 00 00 48 89 44 24 08 48 8d 44 24 20 48 89 44 24 10 b8 10 00 00 00 0f 05 <89> c2 3d 00 f0 ff ff 77 18 48 8b 44 24 18 64 48 2b 04 25 28 00 00
+Jul 19 01:10:45 LEGION kernel: RSP: 002b:00007ffef77f0ba0 EFLAGS: 00000246 ORIG_RAX: 0000000000000010
+Jul 19 01:10:45 LEGION kernel: RAX: ffffffffffffffda RBX: 00007ffef77f8c60 RCX: 00007fcb5d62976f
+Jul 19 01:10:45 LEGION kernel: RDX: 00007ffef77f0c30 RSI: 00000000c01864ba RDI: 0000000000000013
+Jul 19 01:10:45 LEGION kernel: RBP: 00007ffef77f0c30 R08: 000000000000007b R09: 000055b3a0244bf0
+Jul 19 01:10:45 LEGION kernel: R10: 000055b3a0242bf0 R11: 0000000000000246 R12: 00000000c01864ba
+Jul 19 01:10:45 LEGION kernel: R13: 0000000000000013 R14: 000055b39f82f9e0 R15: 0000000000000000
+Jul 19 01:10:45 LEGION kernel:  </TASK>
+Jul 19 01:10:45 LEGION kernel: Modules linked in: btrfs blake2b_generic xor raid6_pq ufs hfsplus hfs cdrom minix msdos jfs xfs libcrc32c ntfs3 8021q garp mrp stp llc snd_ctl_led snd_hda_codec_realtek snd_hda_codec_generic ledtrig_audio snd_hda_codec_hdmi nvidia_drm(POE) nvidia_modeset(POE) snd_acp6x_pdm_dma snd_soc_acp6x_mach snd_soc_dmic snd_sof_amd_rembrandt snd_sof_amd_renoir snd_sof_amd_acp snd_sof_pci snd_sof_xtensa_dsp snd_sof intel_rapl_msr intel_rapl_common rtw89_8852ae snd_sof_utils rtw89_8852a edac_mce_amd snd_soc_core rtw89_pci kvm_amd snd_compress mousedev nvidia_uvm(POE) ac97_bus rtw89_core snd_pcm_dmaengine kvm vfat fat snd_pci_ps snd_rpl_pci_acp6x irqbypass snd_hda_intel snd_acp_pci uvcvideo crct10dif_pclmul snd_intel_dspcfg snd_pci_acp6x crc32_pclmul snd_intel_sdw_acpi btusb polyval_clmulni videobuf2_vmalloc polyval_generic btrtl snd_hda_codec gf128mul uvc btbcm snd_pci_acp5x ghash_clmulni_intel videobuf2_memops snd_hda_core btintel sha512_ssse3 snd_rn_pci_acp3x mac80211 libarc4 videobuf2_v4l2 aesni_intel snd_acp_config
+Jul 19 01:10:45 LEGION kernel:  btmtk hid_multitouch r8169 snd_hwdep nvidia(POE) sp5100_tco crypto_simd videodev ucsi_acpi snd_soc_acpi cfg80211 realtek bluetooth videobuf2_common typec_ucsi ideapad_laptop snd_pcm cryptd mdio_devres snd_timer rapl sparse_keymap wmi_bmof pcspkr mc typec acpi_cpufreq thunderbolt platform_profile k10temp ecdh_generic i2c_piix4 joydev snd snd_pci_acp3x ccp libphy soundcore rfkill roles i2c_hid_acpi i2c_hid amd_pmc acpi_tad mac_hid crypto_user fuse dm_mod loop bpf_preload ip_tables x_tables ext4 crc32c_generic crc16 mbcache jbd2 usbhid amdgpu i2c_algo_bit drm_ttm_helper ttm serio_raw drm_suballoc_helper atkbd drm_buddy libps2 vivaldi_fmap gpu_sched nvme drm_display_helper nvme_core crc32c_intel xhci_pci i8042 video cec xhci_pci_renesas nvme_common serio wmi
+Jul 19 01:10:45 LEGION kernel: CR2: 0000000000000048
+Jul 19 01:10:45 LEGION kernel: ---[ end trace 0000000000000000 ]---
+Jul 19 01:10:45 LEGION kernel: RIP: 0010:drm_property_free_blob+0x8/0x80
+Jul 19 01:10:45 LEGION kernel: Code: ff e9 38 ff ff ff 66 66 2e 0f 1f 84 00 00 00 00 00 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 90 f3 0f 1e fa 0f 1f 44 00 <00> 55 48 8d 6f f0 53 48 8b 47 10 48 89 fb 48 8d b8 88 03 00 00 e8
+Jul 19 01:10:45 LEGION kernel: RSP: 0018:ffffadca498b7bd8 EFLAGS: 00010246
+Jul 19 01:10:45 LEGION kernel: RAX: 0000000000000001 RBX: ffff91cd44d00600 RCX: 0000000000000077
+Jul 19 01:10:45 LEGION kernel: RDX: ffffffff8f6d1338 RSI: 0000000000000000 RDI: ffff91cd10c40010
+Jul 19 01:10:45 LEGION kernel: RBP: 0000000000000000 R08: 0000000000000001 R09: 00000000802a0028
+Jul 19 01:10:45 LEGION kernel: R10: 0000000000000001 R11: 0000000000000100 R12: ffff91cc94b80010
+Jul 19 01:10:45 LEGION kernel: R13: 00000000ffffffff R14: 0000000000000000 R15: 000000000000001e
+Jul 19 01:10:45 LEGION kernel: FS:  00007fcb5cc4f480(0000) GS:ffff91d39e900000(0000) knlGS:0000000000000000
+Jul 19 01:10:45 LEGION kernel: CS:  0010 DS: 0000 ES: 0000 CR0: 0000000080050033
+Jul 19 01:10:45 LEGION kernel: CR2: 0000000000000048 CR3: 000000015ea94000 CR4: 0000000000750ee0
+Jul 19 01:10:45 LEGION kernel: PKRU: 55555554
+Jul 19 01:10:45 LEGION kernel: note: Xorg[1617] exited with irqs disabled
+Jul 19 01:11:00 LEGION kwin_x11[4117]: Freeze in OpenGL initialization detected
+Jul 19 01:11:00 LEGION kwin_x11[4117]: Application::crashHandler() called with signal 6; recent crashes: 1
+Jul 19 01:11:01 LEGION kwin_x11[4117]: 22 -- exe=/usr/bin/kwin_x11
+Jul 19 01:11:01 LEGION kwin_x11[4117]: 13 -- platform=xcb
+Jul 19 01:11:01 LEGION kwin_x11[4117]: 11 -- display=:0
+Jul 19 01:11:01 LEGION kwin_x11[4117]: 17 -- appname=kwin_x11
+Jul 19 01:11:01 LEGION kwin_x11[4117]: 17 -- apppath=/usr/bin
+Jul 19 01:11:01 LEGION kwin_x11[4117]: 9 -- signal=6
+Jul 19 01:11:01 LEGION kwin_x11[4117]: 9 -- pid=4117
+Jul 19 01:11:01 LEGION kwin_x11[4117]: 18 -- appversion=5.27.6
+Jul 19 01:11:01 LEGION kwin_x11[4117]: 17 -- programname=KWin
+Jul 19 01:11:01 LEGION kwin_x11[4117]: 31 -- bugaddress=submit@bugs.kde.org
+Jul 19 01:11:01 LEGION kwin_x11[4117]: KCrash: crashing... crashRecursionCounter = 2
+Jul 19 01:11:01 LEGION kwin_x11[4117]: KCrash: Application Name = kwin_x11 path = /usr/bin pid = 4117
+Jul 19 01:11:01 LEGION kwin_x11[4117]: KCrash: Arguments: /usr/bin/kwin_x11 --replace
+Jul 19 01:11:01 LEGION systemd[1]: Started Process Core Dump (PID 4148/UID 0).
+Jul 19 01:11:01 LEGION systemd-coredump[4152]: Process 4117 (kwin_x11) of user 1000 dumped core.
+                                               
+                                               Stack trace of thread 4135:
+                                               #0  0x00007f8fde49f26c n/a (libc.so.6 + 0x8926c)
+                                               #1  0x00007f8fde44fa08 raise (libc.so.6 + 0x39a08)
+                                               #2  0x00007f8fe13c03ac _ZN6KCrash19defaultCrashHandlerEi (libKF5Crash.so.5 + 0x73ac)
+                                               #3  0x00007f8fde44fab0 n/a (libc.so.6 + 0x39ab0)
+                                               #4  0x00007f8fde49f26c n/a (libc.so.6 + 0x8926c)
+                                               #5  0x00007f8fde44fa08 raise (libc.so.6 + 0x39a08)
+                                               #6  0x00007f8fde438538 abort (libc.so.6 + 0x22538)
+                                               #7  0x00007f8fdf2a0098 _ZNK14QMessageLogger5fatalEPKcz (libQt5Core.so.5 + 0xa0098)
+                                               #8  0x00007f8fe0dbeb39 n/a (libkwin.so.5 + 0x1beb39)
+                                               #9  0x00007f8fdf4d1237 n/a (libQt5Core.so.5 + 0x2d1237)
+                                               #10 0x00007f8fdf4d2d6f _ZN6QTimer7timeoutENS_14QPrivateSignalE (libQt5Core.so.5 + 0x2d2d6f)
+                                               #11 0x00007f8fdf4c3cee _ZN7QObject5eventEP6QEvent (libQt5Core.so.5 + 0x2c3cee)
+                                               #12 0x00007f8fdeb7893f _ZN19QApplicationPrivate13notify_helperEP7QObjectP6QEvent (libQt5Widgets.so.5 + 0x17893f)
+                                               #13 0x00007f8fdf49c2f8 _ZN16QCoreApplication15notifyInternal2EP7QObjectP6QEvent (libQt5Core.so.5 + 0x29c2f8)
+                                               #14 0x00007f8fdf4ea9bb _ZN14QTimerInfoList14activateTimersEv (libQt5Core.so.5 + 0x2ea9bb)
+                                               #15 0x00007f8fdf4eaf9a n/a (libQt5Core.so.5 + 0x2eaf9a)
+                                               #16 0x00007f8fdd30fa31 g_main_context_dispatch (libglib-2.0.so.0 + 0x5aa31)
+                                               #17 0x00007f8fdd36ccc9 n/a (libglib-2.0.so.0 + 0xb7cc9)
+                                               #18 0x00007f8fdd30d0e2 g_main_context_iteration (libglib-2.0.so.0 + 0x580e2)
+                                               #19 0x00007f8fdf4eb15c _ZN20QEventDispatcherGlib13processEventsE6QFlagsIN10QEventLoop17ProcessEventsFlagEE (libQt5Core.so.5 + 0x2eb15c)
+                                               #20 0x00007f8fdf49b004 _ZN10QEventLoop4execE6QFlagsINS_17ProcessEventsFlagEE (libQt5Core.so.5 + 0x29b004)
+                                               #21 0x00007f8fdf2f72d6 _ZN7QThread4execEv (libQt5Core.so.5 + 0xf72d6)
+                                               #22 0x00007f8fdf2f34fa n/a (libQt5Core.so.5 + 0xf34fa)
+                                               #23 0x00007f8fde49d44b n/a (libc.so.6 + 0x8744b)
+                                               #24 0x00007f8fde520e40 n/a (libc.so.6 + 0x10ae40)
+                                               
+                                               Stack trace of thread 4123:
+                                               #0  0x00007f8fde499f0e n/a (libc.so.6 + 0x83f0e)
+                                               #1  0x00007f8fde49c7a0 pthread_cond_wait (libc.so.6 + 0x867a0)
+                                               #2  0x00007f8fd1ec7a4c n/a (radeonsi_dri.so + 0xc7a4c)
+                                               #3  0x00007f8fd1f1495c n/a (radeonsi_dri.so + 0x11495c)
+                                               #4  0x00007f8fde49d44b n/a (libc.so.6 + 0x8744b)
+                                               #5  0x00007f8fde520e40 n/a (libc.so.6 + 0x10ae40)
+                                               
+                                               Stack trace of thread 4130:
+                                               #0  0x00007f8fde499f0e n/a (libc.so.6 + 0x83f0e)
+                                               #1  0x00007f8fde49cab5 pthread_cond_timedwait (libc.so.6 + 0x86ab5)
+                                               #2  0x00007f8fdf2fb214 _ZN14QWaitCondition4waitEP6QMutex14QDeadlineTimer (libQt5Core.so.5 + 0xfb214)
+                                               #3  0x00007f8fdf2f834a n/a (libQt5Core.so.5 + 0xf834a)
+                                               #4  0x00007f8fdf2f34fa n/a (libQt5Core.so.5 + 0xf34fa)
+                                               #5  0x00007f8fde49d44b n/a (libc.so.6 + 0x8744b)
+                                               #6  0x00007f8fde520e40 n/a (libc.so.6 + 0x10ae40)
+                                               
+                                               Stack trace of thread 4120:
+                                               #0  0x00007f8fde499f0e n/a (libc.so.6 + 0x83f0e)
+                                               #1  0x00007f8fde49c7a0 pthread_cond_wait (libc.so.6 + 0x867a0)
+                                               #2  0x00007f8fd1ec7a4c n/a (radeonsi_dri.so + 0xc7a4c)
+                                               #3  0x00007f8fd1f1495c n/a (radeonsi_dri.so + 0x11495c)
+                                               #4  0x00007f8fde49d44b n/a (libc.so.6 + 0x8744b)
+                                               #5  0x00007f8fde520e40 n/a (libc.so.6 + 0x10ae40)
+                                               
+                                               Stack trace of thread 4138:
+                                               #0  0x00007f8fde499f0e n/a (libc.so.6 + 0x83f0e)
+                                               #1  0x00007f8fde49c7a0 pthread_cond_wait (libc.so.6 + 0x867a0)
+                                               #2  0x00007f8fd1ec7a4c n/a (radeonsi_dri.so + 0xc7a4c)
+                                               #3  0x00007f8fd1f1495c n/a (radeonsi_dri.so + 0x11495c)
+                                               #4  0x00007f8fde49d44b n/a (libc.so.6 + 0x8744b)
+                                               #5  0x00007f8fde520e40 n/a (libc.so.6 + 0x10ae40)
+                                               
+                                               Stack trace of thread 4118:
+                                               #0  0x00007f8fde513c0f __poll (libc.so.6 + 0xfdc0f)
+                                               #1  0x00007f8fdd36cc2f n/a (libglib-2.0.so.0 + 0xb7c2f)
+                                               #2  0x00007f8fdd30d0e2 g_main_context_iteration (libglib-2.0.so.0 + 0x580e2)
+                                               #3  0x00007f8fdf4eb15c _ZN20QEventDispatcherGlib13processEventsE6QFlagsIN10QEventLoop17ProcessEventsFlagEE (libQt5Core.so.5 + 0x2eb15c)
+                                               #4  0x00007f8fdf49b004 _ZN10QEventLoop4execE6QFlagsINS_17ProcessEventsFlagEE (libQt5Core.so.5 + 0x29b004)
+                                               #5  0x00007f8fdf2f72d6 _ZN7QThread4execEv (libQt5Core.so.5 + 0xf72d6)
+                                               #6  0x00007f8fde997a9a n/a (libQt5DBus.so.5 + 0x18a9a)
+                                               #7  0x00007f8fdf2f34fa n/a (libQt5Core.so.5 + 0xf34fa)
+                                               #8  0x00007f8fde49d44b n/a (libc.so.6 + 0x8744b)
+                                               #9  0x00007f8fde520e40 n/a (libc.so.6 + 0x10ae40)
+                                               
+                                               Stack trace of thread 4117:
+                                               #0  0x00007f8fde499f0e n/a (libc.so.6 + 0x83f0e)
+                                               #1  0x00007f8fde49c7a0 pthread_cond_wait (libc.so.6 + 0x867a0)
+                                               #2  0x00007f8fdfed89d6 n/a (libxcb.so.1 + 0xd9d6)
+                                               #3  0x00007f8fdfed9926 xcb_wait_for_reply (libxcb.so.1 + 0xe926)
+                                               #4  0x00007f8fe0ef249e _ZNK4KWin6Window11shapeRegionEv (libkwin.so.5 + 0x2f249e)
+                                               #5  0x00007f8fe0e7fecc _ZNK4KWin14SurfaceItemX115shapeEv (libkwin.so.5 + 0x27fecc)
+                                               #6  0x00007f8fe0e7c8a9 _ZNK4KWin14SurfaceItemX116opaqueEv (libkwin.so.5 + 0x27c8a9)
+                                               #7  0x00007f8fe0e81b39 _ZN4KWin14WorkspaceScene24preparePaintSimpleScreenEv (libkwin.so.5 + 0x281b39)
+                                               #8  0x00007f8fe0e8460e _ZN4KWin14WorkspaceScene8prePaintEPNS_13SceneDelegateE (libkwin.so.5 + 0x28460e)
+                                               #9  0x00007f8fe0dbd844 _ZN4KWin10Compositor12prePaintPassEPNS_11RenderLayerE (libkwin.so.5 + 0x1bd844)
+                                               #10 0x00007f8fe0dc1ea0 _ZN4KWin10Compositor9compositeEPNS_10RenderLoopE (libkwin.so.5 + 0x1c1ea0)
+                                               #11 0x00007f8fe0dc292f _ZN4KWin13X11Compositor9compositeEPNS_10RenderLoopE (libkwin.so.5 + 0x1c292f)
+                                               #12 0x00007f8fdf4d1237 n/a (libQt5Core.so.5 + 0x2d1237)
+                                               #13 0x00007f8fe0d716f7 _ZN4KWin10RenderLoop14frameRequestedEPS0_ (libkwin.so.5 + 0x1716f7)
+                                               #14 0x00007f8fe0dc85a8 _ZN4KWin17RenderLoopPrivate8dispatchEv (libkwin.so.5 + 0x1c85a8)
+                                               #15 0x00007f8fdf4d1237 n/a (libQt5Core.so.5 + 0x2d1237)
+                                               #16 0x00007f8fdf4d2d6f _ZN6QTimer7timeoutENS_14QPrivateSignalE (libQt5Core.so.5 + 0x2d2d6f)
+                                               #17 0x00007f8fdf4c3cee _ZN7QObject5eventEP6QEvent (libQt5Core.so.5 + 0x2c3cee)
+                                               #18 0x00007f8fdeb7893f _ZN19QApplicationPrivate13notify_helperEP7QObjectP6QEvent (libQt5Widgets.so.5 + 0x17893f)
+                                               #19 0x00007f8fdf49c2f8 _ZN16QCoreApplication15notifyInternal2EP7QObjectP6QEvent (libQt5Core.so.5 + 0x29c2f8)
+                                               #20 0x00007f8fdf4ea9bb _ZN14QTimerInfoList14activateTimersEv (libQt5Core.so.5 + 0x2ea9bb)
+                                               #21 0x00007f8fdf4eaf9a n/a (libQt5Core.so.5 + 0x2eaf9a)
+                                               #22 0x00007f8fdd30fa31 g_main_context_dispatch (libglib-2.0.so.0 + 0x5aa31)
+                                               #23 0x00007f8fdd36ccc9 n/a (libglib-2.0.so.0 + 0xb7cc9)
+                                               #24 0x00007f8fdd30d0e2 g_main_context_iteration (libglib-2.0.so.0 + 0x580e2)
+                                               #25 0x00007f8fdf4eb15c _ZN20QEventDispatcherGlib13processEventsE6QFlagsIN10QEventLoop17ProcessEventsFlagEE (libQt5Core.so.5 + 0x2eb15c)
+                                               #26 0x00007f8fdf49b004 _ZN10QEventLoop4execE6QFlagsINS_17ProcessEventsFlagEE (libQt5Core.so.5 + 0x29b004)
+                                               #27 0x00007f8fdf49c4a3 _ZN16QCoreApplication4execEv (libQt5Core.so.5 + 0x29c4a3)
+                                               #28 0x000055faddf32ef3 n/a (kwin_x11 + 0x3eef3)
+                                               #29 0x00007f8fde439850 n/a (libc.so.6 + 0x23850)
+                                               #30 0x00007f8fde43990a __libc_start_main (libc.so.6 + 0x2390a)
+                                               #31 0x000055faddf34425 n/a (kwin_x11 + 0x40425)
+                                               
+                                               Stack trace of thread 4126:
+                                               #0  0x00007f8fde499f0e n/a (libc.so.6 + 0x83f0e)
+                                               #1  0x00007f8fde49c7a0 pthread_cond_wait (libc.so.6 + 0x867a0)
+                                               #2  0x00007f8fd1ec7a4c n/a (radeonsi_dri.so + 0xc7a4c)
+                                               #3  0x00007f8fd1f1495c n/a (radeonsi_dri.so + 0x11495c)
+                                               #4  0x00007f8fde49d44b n/a (libc.so.6 + 0x8744b)
+                                               #5  0x00007f8fde520e40 n/a (libc.so.6 + 0x10ae40)
+                                               
+                                               Stack trace of thread 4121:
+                                               #0  0x00007f8fde499f0e n/a (libc.so.6 + 0x83f0e)
+                                               #1  0x00007f8fde49c7a0 pthread_cond_wait (libc.so.6 + 0x867a0)
+                                               #2  0x00007f8fd1ec7a4c n/a (radeonsi_dri.so + 0xc7a4c)
+                                               #3  0x00007f8fd1f1495c n/a (radeonsi_dri.so + 0x11495c)
+                                               #4  0x00007f8fde49d44b n/a (libc.so.6 + 0x8744b)
+                                               #5  0x00007f8fde520e40 n/a (libc.so.6 + 0x10ae40)
+                                               
+                                               Stack trace of thread 4131:
+                                               #0  0x00007f8fde513c0f __poll (libc.so.6 + 0xfdc0f)
+                                               #1  0x00007f8fdd36cc2f n/a (libglib-2.0.so.0 + 0xb7c2f)
+                                               #2  0x00007f8fdd30d0e2 g_main_context_iteration (libglib-2.0.so.0 + 0x580e2)
+                                               #3  0x00007f8fdf4eb15c _ZN20QEventDispatcherGlib13processEventsE6QFlagsIN10QEventLoop17ProcessEventsFlagEE (libQt5Core.so.5 + 0x2eb15c)
+                                               #4  0x00007f8fdf49b004 _ZN10QEventLoop4execE6QFlagsINS_17ProcessEventsFlagEE (libQt5Core.so.5 + 0x29b004)
+                                               #5  0x00007f8fdf2f72d6 _ZN7QThread4execEv (libQt5Core.so.5 + 0xf72d6)
+                                               #6  0x00007f8fe02c2b00 n/a (libQt5Qml.so.5 + 0x2c2b00)
+                                               #7  0x00007f8fdf2f34fa n/a (libQt5Core.so.5 + 0xf34fa)
+                                               #8  0x00007f8fde49d44b n/a (libc.so.6 + 0x8744b)
+                                               #9  0x00007f8fde520e40 n/a (libc.so.6 + 0x10ae40)
+                                               
+                                               Stack trace of thread 4139:
+                                               #0  0x00007f8fde499f0e n/a (libc.so.6 + 0x83f0e)
+                                               #1  0x00007f8fde49c7a0 pthread_cond_wait (libc.so.6 + 0x867a0)
+                                               #2  0x00007f8fd1ec7a4c n/a (radeonsi_dri.so + 0xc7a4c)
+                                               #3  0x00007f8fd1f1495c n/a (radeonsi_dri.so + 0x11495c)
+                                               #4  0x00007f8fde49d44b n/a (libc.so.6 + 0x8744b)
+                                               #5  0x00007f8fde520e40 n/a (libc.so.6 + 0x10ae40)
+                                               
+                                               Stack trace of thread 4127:
+                                               #0  0x00007f8fde499f0e n/a (libc.so.6 + 0x83f0e)
+                                               #1  0x00007f8fde49c7a0 pthread_cond_wait (libc.so.6 + 0x867a0)
+                                               #2  0x00007f8fd1ec7a4c n/a (radeonsi_dri.so + 0xc7a4c)
+                                               #3  0x00007f8fd1f1495c n/a (radeonsi_dri.so + 0x11495c)
+                                               #4  0x00007f8fde49d44b n/a (libc.so.6 + 0x8744b)
+                                               #5  0x00007f8fde520e40 n/a (libc.so.6 + 0x10ae40)
+                                               
+                                               Stack trace of thread 4122:
+                                               #0  0x00007f8fde499f0e n/a (libc.so.6 + 0x83f0e)
+                                               #1  0x00007f8fde49c7a0 pthread_cond_wait (libc.so.6 + 0x867a0)
+                                               #2  0x00007f8fd1ec7a4c n/a (radeonsi_dri.so + 0xc7a4c)
+                                               #3  0x00007f8fd1f1495c n/a (radeonsi_dri.so + 0x11495c)
+                                               #4  0x00007f8fde49d44b n/a (libc.so.6 + 0x8744b)
+                                               #5  0x00007f8fde520e40 n/a (libc.so.6 + 0x10ae40)
+                                               
+                                               Stack trace of thread 4119:
+                                               #0  0x00007f8fde513c0f __poll (libc.so.6 + 0xfdc0f)
+                                               #1  0x00007f8fdfed826b n/a (libxcb.so.1 + 0xd26b)
+                                               #2  0x00007f8fdfed9d1d xcb_wait_for_event (libxcb.so.1 + 0xed1d)
+                                               #3  0x00007f8fd98feed2 n/a (libQt5XcbQpa.so.5 + 0x62ed2)
+                                               #4  0x00007f8fdf2f34fa n/a (libQt5Core.so.5 + 0xf34fa)
+                                               #5  0x00007f8fde49d44b n/a (libc.so.6 + 0x8744b)
+                                               #6  0x00007f8fde520e40 n/a (libc.so.6 + 0x10ae40)
+                                               ELF object binary architecture: AMD x86-64
+-- Boot 35c114da902d42d6b01ad5a23e903bc7 --
+Jul 19 01:11:31 LEGION kernel: Linux version 6.4.3-arch1-2 (linux@archlinux) (gcc (GCC) 13.1.1 20230714, GNU ld (GNU Binutils) 2.40.0) #1 SMP PREEMPT_DYNAMIC Sat, 15 Jul 2023 19:25:49 +0000
+Jul 19 01:11:31 LEGION kernel: Command line: BOOT_IMAGE=/vmlinuz-linux root=UUID=a94c6430-07e8-44c7-86b5-342d722b7d49 rw loglevel=3 quiet
+Jul 19 01:11:31 LEGION kernel: x86/fpu: Supporting XSAVE feature 0x001: 'x87 floating point registers'
+ul 19 01:12:03 LEGION systemd[1]: systemd-hostnamed.service: Deactivated successfully.
